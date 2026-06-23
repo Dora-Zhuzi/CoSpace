@@ -33,7 +33,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="DocGen MVP", lifespan=lifespan)
+app = FastAPI(title="CoSpace", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,

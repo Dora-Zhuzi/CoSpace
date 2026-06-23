@@ -13,7 +13,7 @@ export default function NavBar() {
 
   return (
     <nav className="h-12 flex items-center px-6 gap-6 shrink-0" style={{ backgroundColor: '#D1EEEE' }}>
-      <span className="font-semibold text-sm text-gray-900 mr-4">DocGen</span>
+      <span className="font-semibold text-sm text-gray-900 mr-4">CoSpace</span>
       {NAV_ITEMS.map(({ label, href }) => {
         const active = pathname === href || (href !== '/' && pathname.startsWith(href))
         return (

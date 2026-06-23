@@ -1,5 +1,5 @@
 [project]
-name = "docgen-mvp"
+name = "cospace-backend"
 version = "0.1.0"
 description = "AI 文档生成 MVP（精简可跑版：SQLite + 进程内任务 + 本地存储）"
 requires-python = ">=3.11"

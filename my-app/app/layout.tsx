@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DocGen",
-  description: "文档生成工具",
+  title: "CoSpace",
+  description: "AI 共创写作工具",
 };
 
 export default function RootLayout({
