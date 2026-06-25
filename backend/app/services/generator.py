@@ -35,8 +35,9 @@ def _write_section(label: str, chunks: list[dict]) -> str:
         return "\n".join(lines)
     prompt = (
         f'你是专业写作助手。请根据以下参考素材，为文章的"{label}"部分写一段内容。'
-        "要求：紧扣该部分主题、逻辑清晰、语言流畅；充分利用素材但不要照抄；"
-        "输出纯文本段落，不要重复标题；300-500字左右。\n\n参考素材：\n" + context
+        "要求：紧扣该部分主题、逻辑清晰、语言流畅；充分利用素材，尽量使用原素材内容，"
+        "原素材内容逻辑或语义断裂时才做少量内容补充和衔接；"
+        "输出纯文本段落，不要重复标题。\n\n参考素材：\n" + context
     )
     try:
         return llm.chat(prompt).strip()
