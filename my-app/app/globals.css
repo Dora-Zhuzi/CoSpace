@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 对话气泡内的 Markdown 渲染 */
+.markdown {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  word-break: break-word;
+}
+.markdown > :first-child { margin-top: 0; }
+.markdown > :last-child { margin-bottom: 0; }
+.markdown h1, .markdown h2, .markdown h3, .markdown h4 {
+  font-weight: 600;
+  margin: 0.6em 0 0.3em;
+  line-height: 1.3;
+}
+.markdown h1 { font-size: 1.15em; }
+.markdown h2 { font-size: 1.08em; }
+.markdown h3 { font-size: 1em; }
+.markdown p { margin: 0.4em 0; }
+.markdown ul, .markdown ol { margin: 0.4em 0; padding-left: 1.3em; }
+.markdown ul { list-style: disc; }
+.markdown ol { list-style: decimal; }
+.markdown li { margin: 0.15em 0; }
+.markdown strong { font-weight: 600; }
+.markdown em { font-style: italic; }
+.markdown a { color: #0d9488; text-decoration: underline; }
+.markdown code {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 0.1em 0.35em;
+  border-radius: 0.3em;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.85em;
+}
+.markdown pre {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 0.7em 0.9em;
+  border-radius: 0.5em;
+  overflow-x: auto;
+  margin: 0.5em 0;
+}
+.markdown pre code { background: none; padding: 0; }
+.markdown blockquote {
+  border-left: 3px solid rgba(0, 0, 0, 0.15);
+  padding-left: 0.8em;
+  margin: 0.5em 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+.markdown table { border-collapse: collapse; margin: 0.5em 0; }
+.markdown th, .markdown td { border: 1px solid rgba(0, 0, 0, 0.15); padding: 0.3em 0.6em; }
+.markdown hr { border: none; border-top: 1px solid rgba(0, 0, 0, 0.12); margin: 0.7em 0; }

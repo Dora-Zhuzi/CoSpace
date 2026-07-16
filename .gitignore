@@ -1,0 +1,24 @@
+# ===== 密钥 / 本地数据（务必不要提交）=====
+**/.env
+**/.env.local
+*.db
+*.db-shm
+*.db-wal
+backend/storage/
+
+# ===== Python =====
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ===== Node / Next.js =====
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# ===== 编辑器 / 本地工具数据 =====
+.vscode/
+.claude/
+.DS_Store
